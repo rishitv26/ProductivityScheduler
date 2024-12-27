@@ -56,7 +56,7 @@ def get_free_time_with_durations(task: Task) -> list:
     return free_time_with_durations
 
 def save_in_calendar(start: datetime, end: datetime, task: Task) -> None:
-    event = Event(
+    event: Event = Event(
         summary=task.name,
         start=start,
         end=start + timedelta(minutes=task.duration),
